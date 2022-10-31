@@ -16,6 +16,10 @@ const Update = () => {
       body: JSON.stringify(user),
     })
       .then((res) => res.json())
+      .then((data) => {
+        if(data.modifiedCount>0){
+            alert('User Updated')
+            console.log(data);
         }
       });
   };
